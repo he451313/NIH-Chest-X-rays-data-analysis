@@ -1,0 +1,15 @@
+﻿疾病,男性比例 (%),女性比例 (%),總案例數
+Infiltration,57.43,42.57,19870
+Effusion,55.81,44.19,13307
+Atelectasis,59.75,40.25,11535
+Nodule,58.25,41.75,6323
+Mass,61.09,38.91,5746
+Pneumothorax,51.25,48.75,5298
+Consolidation,57.12,42.88,4667
+Pleural_Thickening,60.32,39.68,3385
+Cardiomegaly,47.11,52.89,2772
+Emphysema,63.99,36.01,2516
+Edema,52.28,47.72,2303
+Fibrosis,54.27,45.73,1686
+Pneumonia,58.39,41.61,1353
+Hernia,42.29,57.71,227

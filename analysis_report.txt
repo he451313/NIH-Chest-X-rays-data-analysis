@@ -1,0 +1,347 @@
+--- NIH Chest X-ray 數據分析報告 ---
+
+--- (1) 基本統計數據 ---
+總影像數: 112120
+總病患數: 30805
+病患平均年齡: 46.90 歲
+男女數量: 男性 63340, 女性 48780
+男女比率 (男:女): 1.30 : 1
+
+--- (2) 疾病盛行率排名 ---
+發現總數 (不含 'No Finding'): 80988
+
+各疾病數量統計:
+Infiltration          19870
+Effusion              13307
+Atelectasis           11535
+Nodule                 6323
+Mass                   5746
+Pneumothorax           5298
+Consolidation          4667
+Pleural_Thickening     3385
+Cardiomegaly           2772
+Emphysema              2516
+Edema                  2303
+Fibrosis               1686
+Pneumonia              1353
+Hernia                  227
+Name: Finding_Labels, dtype: int64
+
+各疾病盛行率 (%):
+Infiltration          17.7221
+Effusion              11.8685
+Atelectasis           10.2881
+Nodule                 5.6395
+Mass                   5.1249
+Pneumothorax           4.7253
+Consolidation          4.1625
+Pleural_Thickening     3.0191
+Cardiomegaly           2.4724
+Emphysema              2.2440
+Edema                  2.0540
+Fibrosis               1.5037
+Pneumonia              1.2067
+Hernia                 0.2025
+Name: Finding_Labels, dtype: float64
+
+--- (3) 疾病與性別關聯 ---
+各疾病中的性別分佈 (按案例數排序):
+                疾病 男性比例 (%) 女性比例 (%)  總案例數
+      Infiltration    57.43    42.57 19870
+          Effusion    55.81    44.19 13307
+       Atelectasis    59.75    40.25 11535
+            Nodule    58.25    41.75  6323
+              Mass    61.09    38.91  5746
+      Pneumothorax    51.25    48.75  5298
+     Consolidation    57.12    42.88  4667
+Pleural_Thickening    60.32    39.68  3385
+      Cardiomegaly    47.11    52.89  2772
+         Emphysema    63.99    36.01  2516
+             Edema    52.28    47.72  2303
+          Fibrosis    54.27    45.73  1686
+         Pneumonia    58.39    41.61  1353
+            Hernia    42.29    57.71   227
+
+--- (4) 疾病與年齡關聯 ---
+各疾病的年齡分佈統計 (按案例數排序):
+                疾病  平均年齡  年齡標準差  中位數年齡  總案例數
+      Infiltration 46.20  17.08  48.00 19870
+          Effusion 49.78  16.54  52.00 13307
+       Atelectasis 50.49  15.78  53.00 11535
+            Nodule 49.47  15.34  52.00  6323
+              Mass 48.81  16.85  51.00  5746
+      Pneumothorax 46.48  17.13  49.00  5298
+     Consolidation 46.65  17.32  49.00  4667
+Pleural_Thickening 50.53  17.49  53.00  3385
+      Cardiomegaly 47.26  17.25  49.00  2772
+         Emphysema 50.32  17.35  54.00  2516
+             Edema 45.58  17.63  47.00  2303
+          Fibrosis 52.71  15.08  53.00  1686
+         Pneumonia 44.78  20.39  46.00  1353
+            Hernia 63.21  13.35  62.00   227
+
+--- (5) 初始疾病演變分析 ---
+分析說明：針對每種單一的初始疾病，統計其後續追蹤中新出現的其他疾病種類與佔比。
+
+--- 初始診斷為 'No Finding' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration  8717   26.63
+          Effusion  5727   17.50
+       Atelectasis  5084   15.53
+      Pneumothorax  2124    6.49
+     Consolidation  2101    6.42
+            Nodule  2033    6.21
+              Mass  1483    4.53
+             Edema  1254    3.83
+Pleural_Thickening  1043    3.19
+         Emphysema  1012    3.09
+      Cardiomegaly   972    2.97
+         Pneumonia   658    2.01
+          Fibrosis   481    1.47
+            Hernia    43    0.13
+
+==================================================
+
+--- 初始診斷為 'Infiltration' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+       Atelectasis   745   20.00
+          Effusion   721   19.36
+     Consolidation   403   10.82
+            Nodule   329    8.83
+      Pneumothorax   324    8.70
+              Mass   239    6.42
+             Edema   232    6.23
+         Emphysema   192    5.15
+      Cardiomegaly   173    4.64
+Pleural_Thickening   153    4.11
+         Pneumonia   115    3.09
+          Fibrosis    94    2.52
+            Hernia     5    0.13
+
+==================================================
+
+--- 初始診斷為 'Effusion' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration   510   29.65
+       Atelectasis   328   19.07
+      Pneumothorax   171    9.94
+     Consolidation   168    9.77
+Pleural_Thickening   125    7.27
+              Mass   109    6.34
+            Nodule   103    5.99
+         Emphysema    66    3.84
+      Cardiomegaly    51    2.97
+             Edema    43    2.50
+         Pneumonia    29    1.69
+          Fibrosis    16    0.93
+            Hernia     1    0.06
+
+==================================================
+
+--- 初始診斷為 'Atelectasis' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration   641   30.19
+          Effusion   466   21.95
+     Consolidation   177    8.34
+      Pneumothorax   171    8.05
+         Emphysema   118    5.56
+Pleural_Thickening   107    5.04
+            Nodule   106    4.99
+              Mass    82    3.86
+             Edema    69    3.25
+      Cardiomegaly    66    3.11
+          Fibrosis    58    2.73
+         Pneumonia    56    2.64
+            Hernia     6    0.28
+
+==================================================
+
+--- 初始診斷為 'Nodule' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration   514   20.04
+          Effusion   474   18.48
+              Mass   362   14.11
+       Atelectasis   315   12.28
+      Pneumothorax   296   11.54
+     Consolidation   156    6.08
+         Emphysema   109    4.25
+Pleural_Thickening   107    4.17
+             Edema    99    3.86
+      Cardiomegaly    46    1.79
+         Pneumonia    44    1.72
+          Fibrosis    35    1.36
+            Hernia     8    0.31
+
+==================================================
+
+--- 初始診斷為 'Mass' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+          Effusion   427   18.74
+      Infiltration   426   18.69
+      Pneumothorax   312   13.69
+       Atelectasis   304   13.34
+            Nodule   239   10.49
+         Emphysema   175    7.68
+     Consolidation   144    6.32
+Pleural_Thickening   109    4.78
+             Edema    72    3.16
+         Pneumonia    26    1.14
+      Cardiomegaly    23    1.01
+          Fibrosis    20    0.88
+            Hernia     2    0.09
+
+==================================================
+
+--- 初始診斷為 'Pneumothorax' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration   107   20.23
+          Effusion    90   17.01
+            Nodule    63   11.91
+              Mass    62   11.72
+       Atelectasis    59   11.15
+         Emphysema    50    9.45
+     Consolidation    34    6.43
+Pleural_Thickening    32    6.05
+          Fibrosis    15    2.84
+             Edema     6    1.13
+         Pneumonia     5    0.95
+      Cardiomegaly     4    0.76
+            Hernia     2    0.38
+
+==================================================
+
+--- 初始診斷為 'Consolidation' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration   123   30.37
+          Effusion    74   18.27
+       Atelectasis    71   17.53
+      Pneumothorax    31    7.65
+              Mass    23    5.68
+         Emphysema    18    4.44
+            Nodule    16    3.95
+Pleural_Thickening    14    3.46
+             Edema    10    2.47
+          Fibrosis     9    2.22
+      Cardiomegaly     9    2.22
+         Pneumonia     7    1.73
+
+==================================================
+
+--- 初始診斷為 'Pleural_Thickening' 的後續疾病分析 ---
+       新發現的疾病  發現次數  佔比 (%)
+     Effusion   220   20.87
+ Infiltration   203   19.26
+ Pneumothorax   139   13.19
+  Atelectasis   139   13.19
+         Mass    87    8.25
+       Nodule    60    5.69
+     Fibrosis    58    5.50
+Consolidation    58    5.50
+    Emphysema    36    3.42
+        Edema    23    2.18
+ Cardiomegaly    15    1.42
+    Pneumonia    14    1.33
+       Hernia     2    0.19
+
+==================================================
+
+--- 初始診斷為 'Cardiomegaly' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration   252   30.77
+          Effusion   229   27.96
+       Atelectasis   119   14.53
+     Consolidation    68    8.30
+             Edema    58    7.08
+            Nodule    21    2.56
+Pleural_Thickening    17    2.08
+         Pneumonia    16    1.95
+          Fibrosis    14    1.71
+      Pneumothorax    12    1.47
+         Emphysema     8    0.98
+              Mass     5    0.61
+
+==================================================
+
+--- 初始診斷為 'Emphysema' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+          Effusion    88   20.61
+      Infiltration    85   19.91
+      Pneumothorax    69   16.16
+       Atelectasis    58   13.58
+              Mass    37    8.67
+            Nodule    22    5.15
+Pleural_Thickening    20    4.68
+     Consolidation    17    3.98
+             Edema    14    3.28
+         Pneumonia     7    1.64
+          Fibrosis     6    1.41
+      Cardiomegaly     4    0.94
+
+==================================================
+
+--- 初始診斷為 'Edema' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration    20   25.32
+      Pneumothorax    16   20.25
+          Effusion    14   17.72
+         Emphysema     8   10.13
+     Consolidation     7    8.86
+Pleural_Thickening     5    6.33
+            Nodule     2    2.53
+              Mass     2    2.53
+       Atelectasis     2    2.53
+      Cardiomegaly     2    2.53
+         Pneumonia     1    1.27
+
+==================================================
+
+--- 初始診斷為 'Fibrosis' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration    87   27.53
+          Effusion    46   14.56
+       Atelectasis    39   12.34
+Pleural_Thickening    32   10.13
+      Pneumothorax    27    8.54
+     Consolidation    22    6.96
+            Nodule    20    6.33
+         Emphysema    13    4.11
+              Mass    11    3.48
+      Cardiomegaly    11    3.48
+         Pneumonia     4    1.27
+             Edema     4    1.27
+
+==================================================
+
+--- 初始診斷為 'Pneumonia' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+      Infiltration    56   48.28
+       Atelectasis    15   12.93
+     Consolidation    11    9.48
+          Effusion     9    7.76
+             Edema     7    6.03
+              Mass     4    3.45
+            Nodule     4    3.45
+Pleural_Thickening     3    2.59
+      Cardiomegaly     3    2.59
+      Pneumothorax     2    1.72
+          Fibrosis     1    0.86
+         Emphysema     1    0.86
+
+==================================================
+
+--- 初始診斷為 'Hernia' 的後續疾病分析 ---
+            新發現的疾病  發現次數  佔比 (%)
+          Effusion    19   28.36
+      Infiltration    15   22.39
+       Atelectasis    11   16.42
+      Cardiomegaly     5    7.46
+            Nodule     4    5.97
+              Mass     3    4.48
+      Pneumothorax     3    4.48
+             Edema     2    2.99
+     Consolidation     2    2.99
+         Emphysema     2    2.99
+Pleural_Thickening     1    1.49
+
+==================================================
+
