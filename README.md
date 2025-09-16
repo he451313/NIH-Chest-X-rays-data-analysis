@@ -8,11 +8,11 @@
 
 ## 視覺化儀表板
 
-您可以在下方的連結中查看本專案的互動式視覺化儀表板：
+您可以在下方的連結中查看使用本專案設計的數據圖表：
 
-[**點擊這裡查看 Looker Studio 儀表板**](https://lookerstudio.google.com/YOUR_LINK_HERE)
+[**點擊這裡查看 Looker Studio**](https://lookerstudio.google.com/reporting/9b1755f8-4702-4705-9a89-56fc25623d18)
 
-**請注意：** 請將 `https://lookerstudio.google.com/YOUR_LINK_HERE` 替換為您自己的 Looker Studio 報表分享連結。
+
 
 ## 主要分析內容
 
